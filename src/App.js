@@ -1,11 +1,22 @@
 import React from "react";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Form from "./components/Form";
 
-const App = () => {
+function App() {
   return (
-    <>
-      <h1>Teknolojik Yemekler</h1>
-      <p>Burdaki kodu silip kendi headerınızı ekleyebilirsiniz</p>
-    </>
+    <div className={StyleSheet.contaner}>
+      <div className="App">
+        <Router>
+          <Route exact path="/">
+            <Home />
+          </Route>{" "}
+          <Route path="/pizza">
+            <Form />
+          </Route>
+        </Router>
+      </div>
+    </div>
   );
-};
+}
 export default App;
