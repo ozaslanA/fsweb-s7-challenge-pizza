@@ -1,6 +1,15 @@
 import React from "react";
-import "./Header.css";
-import { Link } from "react-router-dom";
+import "./Components.css";
+
+import { Link, animateScroll as scroll } from "react-scroll";
+
+const scrollMiddle = () => {
+  scroll.scrollTo(900, {
+    duration: 1000,
+    delay: 100,
+    smooth: "easeInOutQuart",
+  });
+};
 
 function Header(props) {
   const { clickButton } = props;
@@ -14,10 +23,17 @@ function Header(props) {
             KOD ACIKTIRIR <br></br>
             PİZZA,DOYURUR
           </h2>
-          <button onClick={clickButton} data-cy="Header-button">
-            <h1> Acıktım</h1>
-            <Link to="/pizza"></Link>
-          </button>
+          <Link
+            activeClass="active"
+            to="middle"
+            spy={true}
+            smooth={true}
+            duration={1500}
+          >
+            <button className="menu-button" onClick={scrollMiddle}>
+              ACIKTIM
+            </button>
+          </Link>
         </div>
       </div>
     </div>

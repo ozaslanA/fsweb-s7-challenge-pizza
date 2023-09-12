@@ -1,0 +1,244 @@
+/* HEADER */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Quattrocento&family=Satisfy&display=swap");
+
+#menu {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://raw.githubusercontent.com/ozaslanA/fsweb-s7-challenge-pizza/main/Assets/mvp-banner.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: start;
+  font-size: 40px;
+  margin-bottom: 50px;
+  font-family: "Quattrocento", serif;
+}
+.menu-subtitle {
+  display: flex;
+  justify-content: center;
+  font-family: "Satisfy", serif;
+  color: #fdc913;
+  font-size: 30px;
+  font-weight: 50;
+  margin-bottom: -45px;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-family: "Barlow", serif;
+  font-weight: normal;
+}
+button {
+  border-color: yellow;
+  border-radius: 40px;
+  padding: 1px 35px;
+  color: black;
+  background-color: #fdc913;
+  cursor: pointer;
+  border: none;
+}
+.menu-button {
+  color: #ce2829;
+  background-color: white;
+  padding: 10px 25px;
+  font-weight: 600;
+  border: none;
+  margin-left: -5px;
+}
+button:hover {
+  background-color: black;
+  color: white;
+
+  transform: scale(1.1);
+}
+
+/*MENU*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Quattrocento&family=Satisfy&display=swap");
+nav {
+  padding: 10px 0 10px 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 0 35px 0 0;
+}
+nav ul li a {
+  text-decoration: none;
+
+  padding: 14px 20px;
+}
+
+nav ul li:hover {
+  transform: scale(1.5);
+}
+
+#icon {
+  margin: 0 10px -10px 0;
+}
+
+/*PAGE*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Quattrocento&family=Satisfy&display=swap");
+
+.left-container {
+  background-color: red;
+}
+#card-one {
+  background-image: url("../Assets/adv-aseets/kart-1.png");
+  height: 420px;
+  width: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 15px;
+  margin-left: 220px;
+}
+
+#card-two {
+  background-image: url("../Assets/adv-aseets/kart-2.png");
+  height: 230px;
+  width: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1rem;
+  margin-left: 740px;
+  margin-top: -420px;
+}
+
+#card-three {
+  background-image: url("../Assets/adv-aseets/kart-3.png");
+  height: 230px;
+  width: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1rem;
+  margin-left: 740px;
+  margin-top: -15px;
+}
+#card-text {
+  padding-top: 25px;
+  padding-left: 35px;
+  font-size: 20px;
+  font-family: "", serif;
+  color: white;
+}
+#card-text-two {
+  padding-top: 25px;
+  padding-left: 35px;
+  font-size: 11px;
+  font-family: "", serif;
+  color: white;
+}
+#card-text-three {
+  padding-top: 25px;
+  padding-left: 35px;
+  font-size: 11px;
+  font-family: "", serif;
+  color: black;
+}
+.card-button {
+  color: #ce2829;
+  background-color: white;
+  padding: 10px 25px;
+  font-weight: 600;
+  border: none;
+  margin-left: -5px;
+}
+.card-button:hover {
+  background-color: black;
+  color: white;
+}
+#all-container {
+  margin-top: 100px;
+  background-color: rgb(240, 243, 236);
+  height: 500px;
+}
+
+#hot-menu-title-one {
+  text-align: center;
+  color: #ce2829;
+  font-family: "Satisfy", serif;
+  font-size: 20px;
+}
+#hot-menu-title-two {
+  text-align: center;
+  font-family: "Quattrocento " serif;
+  color: black;
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: -20px;
+}
+#hot-menu-nav-ul li {
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+/*HotMenu*/
+
+#products-main {
+  padding: 50px 0px;
+  background-color: rgb(240, 243, 236);
+}
+
+#products-main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.products {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.products-types {
+  border-radius: 1em;
+  background-color: #fff;
+  padding: 15px 30px;
+  border-color: #ffffff00;
+  margin-bottom: 30px;
+}
+
+.products-types:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.products-price {
+  display: flex;
+  justify-content: center;
+}
+
+.products-price h2 {
+  margin-top: 15px;
+  font-size: 2rem;
+}
+
+.products-price p {
+  font-size: 1.3em;
+}
+
+.products-info {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+.products-info .price {
+  font-size: 1.1rem;
+  color: blue;
+}

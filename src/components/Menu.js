@@ -6,7 +6,7 @@ import Icon3 from "../Assets/adv-aseets/icons/3.svg";
 import Icon4 from "../Assets/adv-aseets/icons/4.svg";
 import Icon5 from "../Assets/adv-aseets/icons/5.svg";
 import Icon6 from "../Assets/adv-aseets/icons/6.svg";
-import "./Menu.css";
+import "./Components.css";
 
 function Menu() {
   return (
