@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Components.css";
-
+import HotMenu from "./HotMenu";
 import Logo1 from "../Assets/adv-aseets/icons/1.svg";
 import Logo2 from "../Assets/adv-aseets/icons/2.svg";
 import Logo3 from "../Assets/adv-aseets/icons/3.svg";
@@ -102,6 +102,7 @@ function Page() {
           </ul>
         </nav>
       </div>
+      <HotMenu />
     </div>
   );
 }

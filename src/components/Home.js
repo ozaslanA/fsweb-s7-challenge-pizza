@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Menu from "./Menu";
 import Page from "./Page";
-import HotMenu from "./HotMenu";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <Header />
       <Menu />
       <Page />
-      <HotMenu />
+      <Footer />
     </div>
   );
 }

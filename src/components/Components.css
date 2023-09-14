@@ -242,3 +242,50 @@ nav ul li:hover {
   font-size: 1.1rem;
   color: blue;
 }
+
+/*Footer*/
+.footer-container {
+}
+
+.footer-main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-contents {
+  display: flex;
+  background-color: aqua;
+  flex-direction: row;
+  width: 1500px;
+  justify-content: center;
+  padding-left: 100px;
+
+  padding-right: 200px;
+}
+.footer-bas {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  margin-left: 95px;
+  width: 350px;
+}
+.footer-contents-instagram {
+  background-color: yellow;
+  width: 400px;
+  padding-left: 40px;
+  margin-left: 20px;
+}
+.footer-contents-instagram img {
+  margin-left: 10px;
+}
+
+.footer-contents-instagram h2 {
+  justify-content: start;
+}
+.footer-img {
+  padding-right: 7px;
+  padding-left: 7px;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+}
