@@ -32,7 +32,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="footer-contents">
-              <div classname="footer-contents-1">
+              <div classname="footer-menu">
                 <h2>Sıccacık Menüler</h2>
                 <p>Terminal Pizza</p>
                 <p>5 Kişilik Hackathlon Pizza</p>
