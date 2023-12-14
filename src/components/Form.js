@@ -32,11 +32,24 @@ const Form = ({ product }) => {
     setNote(event.target.value);
   };
   const handleQuantityChange = (event) => {
-    setQuantity(event.target.value);
+    setQuantity(parseInt(event.target.value));
   };
 
   const calculateTotalPrice = () => {
     let totalPrice = product.Fiyat;
+
+    //Boyuta göre fiyat hesaplama
+    if (size === "Orta") {
+      totalPrice += 5;
+    } else if (size === "Büyük") {
+      totalPrice += 10;
+    }
+    if (crust === "İnce Hamur") {
+      totalPrice += 10;
+    } else if (crust === "Kalın Hamur") {
+      totalPrice += 20;
+    }
+    console.log(totalPrice);
   };
   const toppingsList = [
     { value: "pepperoni", label: "Pepperoni" },
@@ -131,7 +144,7 @@ const Form = ({ product }) => {
       </div>
       <div className="form*group">
         <label htmlFor="total-price">Toplam Fiyat</label>
-        <span id="total-price">$</span>
+        <span id="total-price">{calculateTotalPrice()}</span>
       </div>
       <div className="form*group">
         <button type="submit">Sipariş Ver</button>

@@ -1,8 +1,23 @@
-import React from "react";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import React, { useEffect, useState } from "react";
+import { NavLink, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "./Order.css";
-
+import axios from "axios";
+import Form from "./Form";
 const Order = () => {
+  const { id } = useParams();
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://6457e4580c15cb1482137304.mockapi.io/uruncesitleri/${id}`)
+      .then((res) => {
+        setProduct(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [id]);
+
   return (
     <div>
       <div id="header">
@@ -17,19 +32,20 @@ const Order = () => {
       <div id="product-conteiner">
         <div id="product-main-container">
           <div className="product">
-            <img src="" alt="" />
+            <img src={product.foto} alt={product.pizzaAdi} />
             <div className="product-details">
-              <h1>Pizza adı</h1>
+              <h1>{product.pizzaAdi}</h1>
               <div className="price-puan">
-                <p id="price">Fiyat</p>
-                <p id="puan">puan</p>
-                <p>satış adedi</p>
+                <p id="price">{product.Fiyat}₺</p>
+                <p id="puan">Rating:{product.puan}</p>
+                <p id="satisAdedi">Sales Adet({product.satisAdedi})</p>
               </div>
-              <p className="explanation"></p>
+              <p className="explanation">{product.aciklamasi}</p>
             </div>
           </div>
         </div>
       </div>
+      <Form product={product} />
     </div>
   );
 };
