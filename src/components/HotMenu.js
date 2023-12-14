@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import "./Components.css";
 import axios from "axios";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 const HotMenu = () => {
   const [products, setProducts] = useState([]);
 
@@ -23,15 +23,15 @@ const HotMenu = () => {
         <div className="products">
           {products.map((products) => (
             <Link key={products.id} to={`/order/${products.id}`}>
-              <button className="products-types">
+              <button>
                 <img src={products.foto} />
                 <div className="products-price">
                   <h2>{products.pizzaAdi}</h2>
                 </div>
-                <div className="products-info">
+                <div>
                   <p>{products.puan}</p>
-                  <p>({products.satisAdedi})</p>
-                  <p className="price"> {products.Fiyat} ₺</p>
+                  <p>(sales {products.satisAdedi})</p>
+                  <p className="price">{products.Fiyat} $ </p>
                 </div>
               </button>
             </Link>

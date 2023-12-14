@@ -57,15 +57,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr size="1" color="gray" />
-      <div classname="footer-main-container-two">
-        <div classname="footer-main-container-two-head">
-          <div classname="copyright">@ 2023 Teknolojik Yemekler.</div>
-          <div>
-            <FaTwitter />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
