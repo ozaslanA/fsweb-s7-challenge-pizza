@@ -3,6 +3,7 @@ import { NavLink, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "./Order.css";
 import axios from "axios";
 import Form from "./Form";
+import Footer from "./Footer";
 const Order = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
@@ -46,6 +47,7 @@ const Order = () => {
         </div>
       </div>
       <Form product={product} />
+      <Footer />
     </div>
   );
 };
