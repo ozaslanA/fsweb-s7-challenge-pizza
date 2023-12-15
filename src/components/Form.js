@@ -31,6 +31,10 @@ const Form = ({ product }) => {
     setCrust(event.target.value);
     console.log(event.target.value);
   };
+  const handleGoToHomePage = () => {
+    // Anasayfaya yönlendirme işlemi
+    history.push("/");
+  };
   const handleToppingChange = (event) => {
     const { value, checked } = event.target;
     if (checked) {
@@ -276,6 +280,9 @@ const Form = ({ product }) => {
       <div className="form*group">
         <button type="submit">Sipariş Ver</button>
       </div>
+      <button className="productsayfa" onClick={handleGoToHomePage}>
+        Anasayfaya Dön
+      </button>
     </form>
   );
 };
