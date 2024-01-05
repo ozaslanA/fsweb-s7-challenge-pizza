@@ -215,3 +215,5 @@ MVP'yi bitirdikten sonra çalışmanı daha da ileri götürebilirsin. Buradaki 
 | Anasayfa'dan başlayıp, başarılı sipariş gönderimine giden bir test var mı?                | ADV    |
 |                                                                                           |          |
 | Soru-Cevap Sorular                                                                        |          |
+#   P i z z a  
+ 
