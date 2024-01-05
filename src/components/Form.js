@@ -22,7 +22,8 @@ const Form = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [validationErrors, setValidationErrors] = useState({});
   const [orderDetails, setOrderDetails] = useState(null);
-
+  const history = useHistory(); // useHistory kancasını burada tanımla
+  console.log(history);
   const handleSizeChange = (event) => {
     setSize(event.target.value);
     console.log(event.target.value);
@@ -34,6 +35,21 @@ const Form = ({ product }) => {
   const handleGoToHomePage = () => {
     // Anasayfaya yönlendirme işlemi
     history.push("/");
+  };
+  const handleGoToSuccessPage = () => {
+    const order = {
+      pizzaAdi: product.pizzaAdi,
+      size: size,
+      crust: crust,
+      toppings: toppings,
+      note: note,
+      quantity: quantity,
+      totalPrice: calculateTotalPrice(),
+      name: name,
+    };
+
+    setOrderDetails(order);
+    history.push("/success", { orderDetails: order });
   };
   const handleToppingChange = (event) => {
     const { value, checked } = event.target;
@@ -102,7 +118,6 @@ const Form = ({ product }) => {
     { value: "soğan", label: "Soğan" },
     { value: "sarımsak", label: "Sarımsak" },
   ];
-  const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -132,7 +147,6 @@ const Form = ({ product }) => {
 
         form.reset();
         setOrderDetails(order);
-        history(`/success`, { state: { orderDetails: order } });
       } catch (error) {
         if (error.inner) {
           const errors = {};
@@ -275,10 +289,17 @@ const Form = ({ product }) => {
 
       <div className="form*group">
         <label htmlFor="total-price">Toplam Fiyat</label>
-        <span id="total-price">{calculateTotalPrice()}</span>
+        <span id="total-price">{calculateTotalPrice()} TL</span>
       </div>
       <div className="form*group">
-        <button type="submit">Sipariş Ver</button>
+        <button
+          onClick={handleGoToSuccessPage}
+          className="siparisver"
+          type="submit"
+          disabled={calculateTotalPrice() <= 85}
+        >
+          Sipariş Ver
+        </button>
       </div>
       <button className="productsayfa" onClick={handleGoToHomePage}>
         Anasayfaya Dön

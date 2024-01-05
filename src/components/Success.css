@@ -1,0 +1,41 @@
+#success-page-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #4caf50;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#success-page-container h1 {
+  color: #fff;
+}
+
+#success-page-container p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+#success-page-container hr {
+  border-color: #fff;
+}
+
+#success-page-container p.order-detail {
+  font-size: 16px;
+  color: #fff;
+}
+
+#success-page-container p.order-value {
+  font-weight: bold;
+  color: #fff;
+}
+
+#success-page-container p.thank-you {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Add more styles as needed for other elements */

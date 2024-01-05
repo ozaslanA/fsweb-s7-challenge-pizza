@@ -104,7 +104,7 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 15px;
-  margin-left: 370px;
+  margin-left: 170px;
 }
 
 #card-two {
@@ -114,7 +114,7 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 1rem;
-  margin-left: 970px;
+  margin-left: 770px;
   margin-top: -470px;
 }
 
@@ -125,7 +125,7 @@ nav ul li:hover {
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 1rem;
-  margin-left: 970px;
+  margin-left: 770px;
   margin-top: -32px;
 }
 #card-text {
@@ -255,22 +255,20 @@ nav ul li:hover {
 .footer-contents {
   display: flex;
   flex-direction: row;
-  width: 1500px;
+  width: auto;
   padding-left: 200px;
-  padding-right: 200px;
   margin-bottom: 30px;
 }
 .footer-bas {
   display: flex;
   flex-direction: column;
-  margin-left: 60px;
-  padding-left: 10px;
+
   text-align: left;
 }
 .footer-contents-instagram {
   width: 350px;
-  padding-left: 40px;
-  margin-left: 20px;
+
+  margin-right: 30px;
 }
 
 .footer-contents h2 {
@@ -296,4 +294,49 @@ nav ul li:hover {
 .footer-contents p {
   font-size: 15px;
   margin-top: 2px;
+}
+#all-products-main {
+  padding: 30px 5px;
+}
+
+#all-products-main-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.all-products {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.all-products-types {
+  border-radius: 1em;
+  background-color: #fff;
+  padding: 15px 40px;
+  border-color: #ffffff00;
+  margin-bottom: 30px;
+}
+
+.all-products-types:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.all-products-price div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3em;
+}
+
+.all-products-price h2 {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.7em;
+}
+
+.price {
+  font-weight: bold;
 }
